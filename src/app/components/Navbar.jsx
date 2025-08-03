@@ -12,7 +12,7 @@ export default function Navbar() {
     </>
 
     return (
-        <div className="w-10/12 mx-auto navbar bg-base-100 sticky top-0 z-50">
+        <div className="w-10/12 py-3 mx-auto navbar bg-base-100 sticky top-0 z-50">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -25,7 +25,7 @@ export default function Navbar() {
                     </ul>
                 </div>
                 <Link href={"/"}>
-                    <img src={'/assets/logo.svg'} width={107} height={87} alt="" />
+                    <img src={'/assets/logo.svg'} width={107} height={70} alt={"logo"} />
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
@@ -33,7 +33,9 @@ export default function Navbar() {
                     {navMenu}
                 </ul>
             </div>
-            <div className="navbar-end">
+            <div className="navbar-end space-x-4">
+                <Link href={'/register'}>Register</Link>
+                <Link href={'/login'}>Login</Link>
                 <a className="btn btn-error btn-outline rounded">Appointment</a>
             </div>
         </div>
